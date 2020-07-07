@@ -1,11 +1,24 @@
 # DHoroscopeAPI
 Api for the mobile app
 
-Set up
+# Set up
 
-install requirements
+* Create a virtual environment and activate it:
 
-pip install -r requirements.txt
+  python -m venv venv 
+  source venv/bin/activate
+* install requirements
+  pip install -r requirements.txt
+  
+* create django app
+
+  django-admin startproject DHoroscopeCrawler
+  cd DHoroscopeCrawler && python manage.py startapp main
+
+* create scrapy app
+  
+  cd DHoroscopeCrawler
+  scrapy startproject scrapy_dhoroscope
 
 database
   
@@ -15,13 +28,13 @@ database
 
 
 
-run django
-python manage.py runserver
+* run django
+ python manage.py runserver
 
-run scrapyd
+* run scrapyd
 
-cd scrapy_dhoroscope
+  cd scrapy_dhoroscope
 
-scrapyd
-
-curl http://localhost:6800/schedule.json -d project=default -d spider=crawler
+  scrapyd
+  
+  curl http://localhost:6800/schedule.json -d project=default -d spider=crawler
