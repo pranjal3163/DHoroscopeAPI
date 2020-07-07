@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <title>DHoroscope API</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Horoscope crawling</h1>
+        <div class="col">
+            <select id="site-select">
+                <option value="1">Capricorn</option>
+                <option value="2">Aquarius</option>
+                <option value="3">Pisces</option>
+                <option value="4">Aries</option>
+                <option value="5">Taurus</option>
+                <option value="6">Gemini</option>
+                <option value="7">Cancer</option>
+                <option value="8">Leo</option>
+                <option value="9">Virgo</option>
+                <option value="10">Libra</option>
+                <option value="11">Scorpio</option>
+                <option value="12">Sagittarius</option>
+            </select>
+            <button id="start-crawl" class="btn btn-primary">Start crawl</button>
+            <button id="show-data" class="btn btn-info">Show Data</button>
+        </div>
+        <div id="progress"></div>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">sign_name</th>
+                    <th scope="col">date_range</th>
+                    <th scope="col">current_date</th>
+                    <th scope="col">description</th>
+                    <th scope="col">compatibility</th>
+                    <th scope="col">mood</th>
+                    <th scope="col">color</th>
+                    <th scope="col">lucky_number</th>
+                    <th scope="col">lucky_time</th>
+                </tr>
+            </thead>
+            <tbody id="board"></tbody>
+        </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/static/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

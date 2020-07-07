@@ -1,0 +1,122 @@
+2020-07-07 15:13:07 [scrapy.utils.log] INFO: Scrapy 2.1.0 started (bot: scrapy_dhoroscope)
+2020-07-07 15:13:07 [scrapy.utils.log] INFO: Versions: lxml 4.5.1.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.8.2 (default, Apr  9 2020, 12:35:20) - [Clang 11.0.3 (clang-1103.0.32.29)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1g  21 Apr 2020), cryptography 2.9.2, Platform macOS-10.15.5-x86_64-i386-64bit
+2020-07-07 15:13:07 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2020-07-07 15:13:07 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'scrapy_dhoroscope',
+ 'LOG_FILE': 'logs/default/hcrawler/5a4183c0c06411eabc6e0c4de9be997a.log',
+ 'NEWSPIDER_MODULE': 'scrapy_dhoroscope.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scrapy_dhoroscope.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (compatible; Googlebot/2.1; '
+               '+http://www.google.com/bot.html)'}
+2020-07-07 15:13:07 [scrapy.extensions.telnet] INFO: Telnet Password: df55e915ffde65c4
+2020-07-07 15:13:07 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-07-07 15:13:07 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-07-07 15:13:07 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-07-07 15:13:07 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_dhoroscope.pipelines.ScrapyDhoroscopePipeline']
+2020-07-07 15:13:07 [scrapy.core.engine] INFO: Spider opened
+2020-07-07 15:13:07 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-07-07 15:13:07 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-07-07 15:13:08 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://astrology.kudosmedia.net/robots.txt> (referer: None)
+2020-07-07 15:13:08 [protego] DEBUG: Rule at line 21 without any user agent to enforce it on.
+2020-07-07 15:13:08 [protego] DEBUG: Rule at line 40 without any user agent to enforce it on.
+2020-07-07 15:13:08 [protego] DEBUG: Rule at line 45 without any user agent to enforce it on.
+2020-07-07 15:13:08 [protego] DEBUG: Rule at line 53 without any user agent to enforce it on.
+2020-07-07 15:13:08 [protego] DEBUG: Rule at line 54 without any user agent to enforce it on.
+2020-07-07 15:13:08 [protego] DEBUG: Rule at line 69 without any user agent to enforce it on.
+2020-07-07 15:13:08 [protego] DEBUG: Rule at line 72 without any user agent to enforce it on.
+2020-07-07 15:13:08 [protego] DEBUG: Rule at line 576 without any user agent to enforce it on.
+2020-07-07 15:13:08 [protego] DEBUG: Rule at line 596 without any user agent to enforce it on.
+2020-07-07 15:13:08 [protego] DEBUG: Rule at line 684 without any user agent to enforce it on.
+2020-07-07 15:13:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://astrology.kudosmedia.net/m/capricorn?day=yesterday> (referer: None)
+2020-07-07 15:13:09 [asyncio] DEBUG: Using selector: KqueueSelector
+2020-07-07 15:13:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://astrology.kudosmedia.net/m/capricorn?day=yesterday>
+{'color': 'Orange',
+ 'compatibility': 'Cancer',
+ 'current_date': 'July 6, 2020',
+ 'date_range': 'Dec 22 - Jan 19',
+ 'description': "If you still can't get together with your boss (or employee, "
+                "as the case may be) don't blame it on either of you. The "
+                "heavens aren't being especially cooperative when it comes to "
+                'scheduling.',
+ 'lucky_number': '64',
+ 'lucky_time': '5pm',
+ 'mood': 'Tolerance',
+ 'sign_name': 'Capricorn'}
+2020-07-07 15:13:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://astrology.kudosmedia.net/m/capricorn?day=today> (referer: None)
+2020-07-07 15:13:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://astrology.kudosmedia.net/m/capricorn?day=tomorrow> (referer: None)
+2020-07-07 15:13:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://astrology.kudosmedia.net/m/capricorn?day=today>
+{'color': 'Silver',
+ 'compatibility': 'Scorpio',
+ 'current_date': 'July 7, 2020',
+ 'date_range': 'Dec 22 - Jan 19',
+ 'description': 'Someone seems determined to see what it will take for you to '
+                "lose your temper in public -- and you just know they'll keep "
+                'pushing your buttons until they find out. A firm but subtle '
+                'warning is definitely in order.',
+ 'lucky_number': '82',
+ 'lucky_time': '11pm',
+ 'mood': 'Determined',
+ 'sign_name': 'Capricorn'}
+2020-07-07 15:13:09 [scrapy.core.scraper] DEBUG: Scraped from <200 http://astrology.kudosmedia.net/m/capricorn?day=tomorrow>
+{'color': 'Teal',
+ 'compatibility': 'Aquarius',
+ 'current_date': 'July 8, 2020',
+ 'date_range': 'Dec 22 - Jan 19',
+ 'description': "You've never minced words, and you're not about to start now. "
+                'You may be a bit more brusque than you mean to be, however. '
+                "If you're with a loved one who's been overly sensitive "
+                'lately, go easy.',
+ 'lucky_number': '77',
+ 'lucky_time': '10am',
+ 'mood': 'Moody',
+ 'sign_name': 'Capricorn'}
+2020-07-07 15:13:09 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-07-07 15:13:09 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1128,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 41670,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 3,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 1.535291,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 7, 7, 15, 13, 9, 428617),
+ 'item_scraped_count': 3,
+ 'log_count/DEBUG': 18,
+ 'log_count/INFO': 10,
+ 'memusage/max': 65740800,
+ 'memusage/startup': 65740800,
+ 'response_received_count': 4,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/404': 1,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2020, 7, 7, 15, 13, 7, 893326)}
+2020-07-07 15:13:09 [scrapy.core.engine] INFO: Spider closed (finished)
