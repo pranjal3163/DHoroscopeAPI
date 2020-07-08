@@ -37,4 +37,4 @@ database
 
   scrapyd
   
-  curl http://localhost:6800/schedule.json -d project=default -d spider=crawler
+  curl http://localhost:6800/schedule.json -d project=default -d spider=hcrawler
