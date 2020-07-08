@@ -9,6 +9,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 from scrapyd_api import ScrapydAPI
 from main.models import HoroscopeItem
+from datetime import date
+
 
 scrapyd = ScrapydAPI('http://localhost:6800')
 
@@ -34,14 +36,15 @@ def crawl(request):
         url = request.POST.get('url', None)
         if not url:
             return JsonResponse(
-                {'error': 'URL 없음'},
+                {'error': 'No URL'},
                  status=HTTPStatus.BAD_REQUEST
             )
         if not is_valid_url(url):
             return JsonResponse(
-                {'error': 'URL 유효하지 않음'},
+                {'error': 'URL is not valid'},
                 status=HTTPStatus.BAD_REQUEST
             )
+        forecastDay = request.POST.get('forecastDay', "today")
         domain = urlparse(url).netloc
         unique_id = str(uuid4())
 
@@ -50,7 +53,8 @@ def crawl(request):
             'USER_AGENT': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
         }
         try:
-            task = scrapyd.schedule('default', 'hcrawler', settings=settings, url=url, domain=domain)
+            HoroscopeItem.objects.all().delete()
+            task = scrapyd.schedule('default', 'hcrawler', settings=settings, url=url, day =forecastDay,domain=domain)
         except SchedulingError as e:
             return JsonResponse(
                 {'error': e},
@@ -129,3 +133,4 @@ def show_data(request):
         dict_list.append(dict_data)
     data = {'data': dict_list}
     return JsonResponse(data)
+

@@ -23,11 +23,9 @@ class ScrapyDhoroscopePipeline:
 
     def process_item(self, item, spider):
         scrapy_item = HoroscopeItem()
-
         # convert the  current date from string to DateTimeField
         str_date= item['current_date']
         date_formated = datetime.strptime(str_date, '%B %d, %Y')
-
         scrapy_item.unique_id = self.unique_id
         scrapy_item.sign_name = item['sign_name']
         scrapy_item.date_range = item['date_range']
@@ -38,7 +36,6 @@ class ScrapyDhoroscopePipeline:
         scrapy_item.color = item['color']
         scrapy_item.lucky_number = item['lucky_number']
         scrapy_item.lucky_time = item['lucky_time']
-
         scrapy_item.save()
         return item
 

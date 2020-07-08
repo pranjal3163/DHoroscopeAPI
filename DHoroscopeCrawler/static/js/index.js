@@ -2,6 +2,7 @@ var taskId;
 var uniqueId;
 var statusInterval;
 var url;
+var forecastDay;
 var siteUrl = {
     1: 'http://astrology.kudosmedia.net/m/capricorn?day=',
     2: 'http://astrology.kudosmedia.net/m/aquarius?day=',
@@ -17,10 +18,17 @@ var siteUrl = {
     12: 'http://astrology.kudosmedia.net/m/sagittarius?day='
 };
 
+var dayselect = {
+    1:'today',
+    2:'yesterday',
+    3:'tomorrow'
+}
 var sunshines =["Capricorn","Aquarius","Pisces","Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius"];
 var selectedCategory;
+var selectedDay;
 
 $(document).ready(function(){
+
     $(document).on('click', '#start-crawl', function(){
         selectedCategory = $('#site-select option:selected').val();
         for(k in siteUrl){
@@ -28,6 +36,13 @@ $(document).ready(function(){
                 url = siteUrl[k]
             }
         }
+        selectedDay = $('#day-select option:selected').val();
+        for(i in dayselect){
+            if(i === selectedDay){
+                forecastDay = dayselect[i]
+            }
+        }
+
         $('#progress').attr("class", "alert alert-secondary");
         $('#progress').html('crawler is working...');
         $.ajax({
@@ -35,6 +50,7 @@ $(document).ready(function(){
             type: 'POST',
             data: {
                 'url': url,
+                'forecastDay':forecastDay,
             },
             success: crawlSuccess,
             error: crawlFail,

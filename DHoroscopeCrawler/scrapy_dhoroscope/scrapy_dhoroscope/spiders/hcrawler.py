@@ -15,6 +15,7 @@ class hcrawler(CrawlSpider):
     def __init__(self, *args, **kwargs):
         self.url = kwargs.get('url')
         self.domain = kwargs.get('domain')
+        self.day = kwargs.get('day')
         self.allowed_domains = [self.domain]
         self.category_dict = {
             'Capricorn': 1,
@@ -33,23 +34,23 @@ class hcrawler(CrawlSpider):
 
     def start_requests(self):
         days = {"yesterday","today","tomorrow"}
-        # urls = [
-        #     'http://astrology.kudosmedia.net/m/capricorn?day=',
-        #     'http://astrology.kudosmedia.net/m/aquarius?day=',
-        #     'http://astrology.kudosmedia.net/m/pisces?day=',
-        #     'http://astrology.kudosmedia.net/m/aries?day=',
-        #     'http://astrology.kudosmedia.net/m/taurus?day=',
-        #     'http://astrology.kudosmedia.net/m/gemini?day=',
-        #     'http://astrology.kudosmedia.net/m/cancer?day=',
-        #     'http://astrology.kudosmedia.net/m/leo?day=',
-        #     'http://astrology.kudosmedia.net/m/virgo?day=',
-        #     'http://astrology.kudosmedia.net/m/libra?day=',
-        #     'http://astrology.kudosmedia.net/m/scorpio?day=',
-        #     'http://astrology.kudosmedia.net/m/sagittarius?day='
-        # ]
-        #for url in urls:
-        for day in days:  # Sunshine by day
-            yield scrapy.Request(url=self.url+day, callback=self.parse_sunshine)
+        urls = [
+            'http://astrology.kudosmedia.net/m/capricorn?day=',
+            'http://astrology.kudosmedia.net/m/aquarius?day=',
+            'http://astrology.kudosmedia.net/m/pisces?day=',
+            'http://astrology.kudosmedia.net/m/aries?day=',
+            'http://astrology.kudosmedia.net/m/taurus?day=',
+            'http://astrology.kudosmedia.net/m/gemini?day=',
+            'http://astrology.kudosmedia.net/m/cancer?day=',
+            'http://astrology.kudosmedia.net/m/leo?day=',
+            'http://astrology.kudosmedia.net/m/virgo?day=',
+            'http://astrology.kudosmedia.net/m/libra?day=',
+            'http://astrology.kudosmedia.net/m/scorpio?day=',
+            'http://astrology.kudosmedia.net/m/sagittarius?day='
+        ]
+        for url in urls:
+            for day in days:  # Sunshine by day
+                yield scrapy.Request(url= url + day, callback=self.parse_sunshine)
 
     def parse_sunshine(self, response):  # Get all sunshine details
 

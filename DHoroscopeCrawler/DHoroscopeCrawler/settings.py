@@ -25,7 +25,9 @@ SECRET_KEY = '3b!4s_#&bb#cp@!45(s9!52pkv%l*d8k=c!)_$p8y1^58bushx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1"]
+
+APPEND_SLASH = False
 
 
 # Application definition
@@ -79,10 +81,10 @@ WSGI_APPLICATION = 'DHoroscopeCrawler.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dHoroscope',
-        'USER': 'dbadmin',
+        'NAME': 'threebm$dHoroscope',
+        'USER': 'threebm',
         'PASSWORD': 'pranjal3163#',
-        'HOST': 'localhost',
+        'HOST': 'threebm.mysql.pythonanywhere-services.com',
         'PORT': '3306',
         'OPTIONS': {
             'init_command': "SET sql_mode = 'STRICT_TRANS_TABLES'"
