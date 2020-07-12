@@ -11,16 +11,31 @@ ALLOWED_HOSTS = ["127.0.0.1","192.168.1.6"]
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'dHoroscope',
+#         'USER': 'dbadmin',
+#         'PASSWORD': 'pranjal3163#',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#         'OPTIONS': {
+#             'init_command': "SET sql_mode = 'STRICT_TRANS_TABLES'"
+#         }
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dHoroscope',
-        'USER': 'dbadmin',
-        'PASSWORD': 'pranjal3163#',
-        'HOST': 'localhost',
+        'USER': 'pranjal',
+        'PASSWORD': 'Pranjal3163#',
+        'HOST': 'dhoro.c9w15j0y13hj.us-west-2.rds.amazonaws.com',
         'PORT': '3306',
         'OPTIONS': {
             'init_command': "SET sql_mode = 'STRICT_TRANS_TABLES'"
         }
     }
+
 }
