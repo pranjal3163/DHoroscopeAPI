@@ -20,8 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = '3b!4s_#&bb#cp@!45(s9!52pkv%l*d8k=c!)_$p8y1^58bushx'
+SECRET_KEY = '3b!4s_#&bb#cp@!45(s9!52pkv%l*d8k=c!)_$p8y1^58bushx'
 
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = ["127.0.0.1","192.168.1.6"]
 
 APPEND_SLASH = False
 
@@ -55,7 +59,7 @@ SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(SETTINGS_PATH, 'template')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,6 +75,22 @@ TEMPLATES = [
 WSGI_APPLICATION = 'DHoroscopeCrawler.wsgi.application'
 
 
+# Database
+# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'dHoroscope',
+        'USER': 'dbadmin',
+        'PASSWORD': 'pranjal3163#',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode = 'STRICT_TRANS_TABLES'"
+        }
+    }
+}
 
 
 # Password validation
@@ -117,5 +137,4 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-
 STATIC_ROOT = 'staticfiles'
