@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
-import os
 import sys
-
+import loadenv
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'DHoroscopeCrawler.settings')
+    loadenv.getenvironment()
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

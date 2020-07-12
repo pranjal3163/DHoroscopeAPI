@@ -15,8 +15,12 @@ import sys
 # DJANGO INTEGRATION
 
 sys.path.append(os.path.dirname(os.path.abspath('.')))
+
+import  loadenv
+loadenv.getenvironment()
 # Do not forget the change iCrawler part based on your project name
-os.environ['DJANGO_SETTINGS_MODULE'] = 'DHoroscopeCrawler.settings'
+#os.environ['DJANGO_SETTINGS_MODULE'] = 'DHoroscopeCrawler.settings.development'
+
 
 import django
 django.setup()
@@ -31,6 +35,7 @@ NEWSPIDER_MODULE = 'scrapy_dhoroscope.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'scrapy_dhoroscope (+http://www.yourdomain.com)'
+
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True

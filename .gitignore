@@ -162,6 +162,3 @@ docker_judger/run/spj/spj-2
 # ignore migration modules
 
 **/migrations/*
-codexdata.json
-pyscript1.py
-pyscript2.py
