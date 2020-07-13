@@ -4,7 +4,7 @@ DEBUG = False
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
-ALLOWED_HOSTS = ['0.0.0.0', '52.24.58.174']
+ALLOWED_HOSTS = ['0.0.0.0', '52.41.27.163']
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
