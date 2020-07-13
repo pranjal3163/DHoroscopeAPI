@@ -12,4 +12,3 @@ urlpatterns = [
     path('api/showdata/', views.show_data, name='show_data')
 ]
 
-urlpatterns += staticfiles_urlpatterns()

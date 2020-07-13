@@ -16,20 +16,6 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '3b!4s_#&bb#cp@!45(s9!52pkv%l*d8k=c!)_$p8y1^58bushx'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ["127.0.0.1","192.168.1.6"]
-
-APPEND_SLASH = False
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -127,10 +113,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-
-
-STATIC_URL = '/static/' # the path in url
-
+print(BASE_DIR)
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, '../main/static')
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
