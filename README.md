@@ -1,5 +1,5 @@
 # DHoroscopeAPI
-Api for the mobile app
+Api for the mobile app built using scrapy, django
 
 # Set up
 
