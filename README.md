@@ -1,5 +1,5 @@
 # DHoroscopeAPI
-Api for the mobile app built using scrapy, django
+An application built in using django with scrappy. Intregation of django and scrapy using scrapyd  
 
 # Set up
 
