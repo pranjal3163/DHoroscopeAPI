@@ -13,9 +13,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dHoroscope',
-        'USER': 'pranjal',
-        'PASSWORD': 'Pranjal3163#',
-        'HOST': 'dhoro.c9w15j0y13hj.us-west-2.rds.amazonaws.com',
+        'USER':  os.environ['username'],
+        'PASSWORD': os.environ['passwd'],
+        'HOST':os.environ['host'],
         'PORT': '3306',
         'OPTIONS': {
             'init_command': "SET sql_mode = 'STRICT_TRANS_TABLES'"
